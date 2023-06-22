@@ -1,0 +1,5 @@
+node_modules/
+.env
+snap-caption-model/image-caption/vit-gpt2-image-captioning
+snap-caption-model/image-caption/venv
+**/__pycache__

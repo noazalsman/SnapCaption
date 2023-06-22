@@ -1,0 +1,33 @@
+.image-upload-btn {
+    display: inline-block;
+    padding: 6px 12px;
+}
+
+.file {
+    border: 1px solid rgb(91, 91, 91);
+    border-radius: 6px;
+}
+
+.desc {
+    margin-left: 10%;
+}
+
+.file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(0, 123, 255);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .file-upload:hover {
+    background-color: rgb(0, 103, 219);
+  }
+
+  .desc {
+    text-align: center;
+    padding-right: 11%;
+  }
+  

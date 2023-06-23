@@ -32,10 +32,12 @@ const FormComponent: React.FC<FormComponentProps> = ({ sendOpenAICaption, setLoa
   const [names, setNames] = useState<string>('');
   const [places, setPlaces] = useState<string>('');
   const [photo_description, setPhotoDescription] = useState<string>('');
+  const [isDisabled, setIsDisabled] = useState<boolean>(false);
 
   useEffect(() => {
     if(photo_description !== '') {
       setSmallLoading(false);
+      setIsDisabled(false);
     }
   }, [photo_description]);
 
@@ -56,6 +58,7 @@ const FormComponent: React.FC<FormComponentProps> = ({ sendOpenAICaption, setLoa
   };  
 
   const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setIsDisabled(true);
     setSmallLoading(true);
     setPhotoDescription('');
     if (event.target.files && event.target.files.length > 0) {
@@ -166,7 +169,7 @@ const FormComponent: React.FC<FormComponentProps> = ({ sendOpenAICaption, setLoa
       </div>
 
       <div className='submit'>
-        <IonButton color="dark" disabled={photo_description === ''} onClick={handleSubmit}>Generate</IonButton>
+        <IonButton color="dark" disabled={isDisabled} onClick={handleSubmit}>Generate</IonButton>
       </div>
           
     </div>

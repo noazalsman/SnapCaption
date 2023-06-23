@@ -25,23 +25,34 @@ Follow these steps to get the app up and running:
 
 
 ### Step 1: Install Python Dependencies & Run Image Recognition Model
-Navigate to the directory containing the `requirements.txt` file and install the necessary Python packages using pip, and run the Python script to get the image recognition model working:
+Create and activate a python venv:
 
 ```bash
-cd snap-caption-model/image-caption/YouTube-Image-to-Text
+cd snap-caption-model
+python -m venv venv
+.\venv\Scripts\activate
+```
+
+Navigate to the directory containing the `requirements.txt` file and install the necessary Python packages using pip:
+
+```bash
+cd image-caption/YouTube-Image-to-Text
 pip install -r requirements.txt
-python3 predict_caption.py
-cd ../../../
+```
+
+Next, run the Python script to get the image recognition model working:
+
+```bash
+python predict_caption.py
 ```
 
 ### Step 2: Install dependencies
+In a new terminal, navigate to the `snap-caption-app` directory and install the dependencies using npm:
+
 ```bash
 cd snap-caption-app
 npm install
 ```
-
-This will install all the necessary packages and dependencies required by the application.
-
 
 ### Step3: Setup Environment Variables
 Create a new file named `.env`. In this file, add your OpenAI key as follows:
@@ -53,14 +64,15 @@ OPENAI_KEY=your_openai_key
 Please replace `your_openai_key` with your actual OpenAI key.
 
 ### Step 4: Start server
-Start the Node.js (for openAI calls) server by running the following command:
+Start the Node.js server by running the following command:
 ```bash
 npm run start-server
 ```
 
 ### Step 5: Serve Ionic app
-Finally, serve the Ionic application using:
+Finally, in another terminal, serve the Ionic application using:
 ```bash
+cd snap-caption-app
 ionic serve
 ```
 

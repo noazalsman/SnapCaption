@@ -43,10 +43,13 @@ const Home: React.FC = () => {
   }
 
   return (
-    <IonPage>
+    <IonPage className='app'>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>SnapCaption</IonTitle>
+          <IonTitle>
+            <img src="../../public/logo.png" alt="SnapCaption" className="logo" height="40px"/>
+            <span className='title'>SnapCaption</span>
+          </IonTitle>
           {loading ? <IonProgressBar type="indeterminate"></IonProgressBar> : null}
         </IonToolbar>
       </IonHeader>

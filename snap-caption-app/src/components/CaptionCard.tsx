@@ -11,18 +11,26 @@ const CaptionCard: React.FC<CaptionCardProps> = ({ caption, sendOpenAISimilar })
     const [newCaption, setNewCaption] = useState<string>(caption);
     const [isEditing, setIsEditing] = useState<boolean>(false);
     const [showToast, setShowToast] = useState<boolean>(false);
+    const [isRegenerating, setIsRegenerating] = useState<boolean>(false);
 
     useEffect(() => {
         setNewCaption(caption);
     }, [caption]);
+
+    useEffect(() => {
+        if (isRegenerating) {
+            sendOpenAISimilar(newCaption);
+        }
+        setIsRegenerating(false);
+    }, [newCaption]);
 
     const handleInputChange = (e: any) => {
         setNewCaption(e.detail.value);
     };
 
     const handleButtonClick = () => {
+        setIsRegenerating(true);
         setIsEditing(false);
-        sendOpenAISimilar(newCaption);
     };
 
     const handleEditClick = () => {
@@ -70,6 +78,7 @@ const CaptionCard: React.FC<CaptionCardProps> = ({ caption, sendOpenAISimilar })
                     </div>
                     <IonCardContent className='card-title'>
                         {isEditing ? 
+                            // <textarea rows={7} className='card' value={newCaption} onChange={handleInputChange}></textarea>
                              <IonTextarea className='card' value={newCaption} autoGrow={true} onIonChange={handleInputChange}></IonTextarea>
                              :
                             newCaption

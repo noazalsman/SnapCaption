@@ -16,9 +16,6 @@ Whether it's Instagram, LinkedIn, or Facebook, SnapCaption makes it easy for use
 - Python3 installed.
 - Ionic CLI installed.
 - OpenAI API key.
-- Download the vit-gpt2-image-captioning model from Hugging face (Clone the repo from https://huggingface.co/nlpconnect/vit-gpt2-image-captioning)
-
-Make sure to place the cloned model in the snap-caption-model\image-caption directory.
 
 ## Installation
 Follow these steps to get the app up and running:
@@ -66,7 +63,7 @@ Please replace `your_openai_key` with your actual OpenAI key.
 ### Step 4: Start server
 Start the Node.js server by running the following command:
 ```bash
-npm run start-server
+node open-ai-server.js
 ```
 
 ### Step 5: Serve Ionic app

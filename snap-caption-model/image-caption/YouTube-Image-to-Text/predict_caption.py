@@ -8,9 +8,9 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-model = VisionEncoderDecoderModel.from_pretrained('../vit-gpt2-image-captioning')
-feature_extractor = ViTImageProcessor.from_pretrained('../vit-gpt2-image-captioning')
-tokenizer = AutoTokenizer.from_pretrained('../vit-gpt2-image-captioning')
+model = VisionEncoderDecoderModel.from_pretrained('nlpconnect/vit-gpt2-image-captioning')
+feature_extractor = ViTImageProcessor.from_pretrained('nlpconnect/vit-gpt2-image-captioning')
+tokenizer = AutoTokenizer.from_pretrained('nlpconnect/vit-gpt2-image-captioning')
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model.to(device)

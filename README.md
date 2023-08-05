@@ -14,7 +14,7 @@ Whether it's Instagram, LinkedIn, or Facebook, SnapCaption makes it easy for use
 ## Prerequisites
 - Node.js and npm installed.
 - Python3 installed.
-- Ionic CLI installed.
+- Ionic CLI installed. (npm install -g @ionic/cli)
 - OpenAI API key.
 
 ## Installation
@@ -25,7 +25,7 @@ Follow these steps to get the app up and running:
 Create and activate a python venv:
 
 ```bash
-cd snap-caption-model
+cd SnapCaption/snap-caption-model
 python -m venv venv
 .\venv\Scripts\activate
 ```
@@ -47,7 +47,7 @@ python predict_caption.py
 In a new terminal, navigate to the `snap-caption-app` directory and install the dependencies using npm:
 
 ```bash
-cd snap-caption-app
+cd SnapCaption/snap-caption-app
 npm install
 ```
 
@@ -55,7 +55,7 @@ npm install
 Create a new file named `.env`. In this file, add your OpenAI key as follows:
 
 ```bash
-OPENAI_KEY=your_openai_key
+echo OPENAI_KEY=your_openai_key > .env
 ```
 
 Please replace `your_openai_key` with your actual OpenAI key.

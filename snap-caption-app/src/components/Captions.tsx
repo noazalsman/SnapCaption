@@ -1,5 +1,4 @@
 import React from 'react';
-import { IonInput, IonButton } from '@ionic/react';
 import CaptionCard from './CaptionCard';
 
 interface CaptionsProps {

@@ -10,6 +10,7 @@ Whether it's Instagram, LinkedIn, or Facebook, SnapCaption makes it easy for use
 - Employs an image recognition AI model from Hugging Face for interpreting image contents.
 - Interactive user interface to answer quick questions and upload a cover photo.
 - Generates creative and relevant captions for your posts on Instagram, LinkedIn, or Facebook.
+- This app uses firebase by google for analytics and event data.
 
 ## Prerequisites
 - Node.js and npm installed.
@@ -69,7 +70,7 @@ node open-ai-server.js
 ### Step 5: Serve Ionic app
 Finally, in another terminal, serve the Ionic application using:
 ```bash
-cd snap-caption-app
+cd SnapCaption/snap-caption-app
 ionic serve
 ```
 

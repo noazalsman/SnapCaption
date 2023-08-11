@@ -28,7 +28,7 @@ Create and activate a python venv:
 ```bash
 cd SnapCaption/snap-caption-model
 python3 -m venv venv
-source venv/bin/activate (for mac)
+source venv/bin/activate  #for mac
 ```
 
 Navigate to the directory containing the `requirements.txt` file and install the necessary Python packages using pip:

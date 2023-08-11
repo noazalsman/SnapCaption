@@ -78,9 +78,8 @@ tokenizers
 tomli
 toolz
 torch
-torchvision
 tqdm
-triton
+# triton
 typing_extensions
 tzdata
 uc-micro-py
@@ -90,6 +89,7 @@ websockets
 yarl
 zipp
 transformers
+torchvision
 
 
 

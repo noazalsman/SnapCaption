@@ -48,7 +48,7 @@ python predict_caption.py
 In a new terminal, navigate to the `snap-caption-app` directory and install the dependencies using npm:
 
 ```bash
-cd snap-caption-app
+cd SnapCaption/snap-caption-app
 npm install
 ```
 
@@ -70,7 +70,7 @@ node open-ai-server.js
 ### Step 5: Serve Ionic app
 Finally, in another terminal, serve the Ionic application using:
 ```bash
-cd snap-caption-app
+cd SnapCaption/snap-caption-app
 ionic serve
 ```
 

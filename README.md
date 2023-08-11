@@ -26,7 +26,7 @@ Follow these steps to get the app up and running:
 Create and activate a python venv:
 
 ```bash
-cd SnapCaption/snap-caption-model
+cd snap-caption-model
 python -m venv venv
 .\venv\Scripts\activate
 ```
@@ -48,7 +48,7 @@ python predict_caption.py
 In a new terminal, navigate to the `snap-caption-app` directory and install the dependencies using npm:
 
 ```bash
-cd SnapCaption/snap-caption-app
+cd snap-caption-app
 npm install
 ```
 
@@ -70,7 +70,7 @@ node open-ai-server.js
 ### Step 5: Serve Ionic app
 Finally, in another terminal, serve the Ionic application using:
 ```bash
-cd SnapCaption/snap-caption-app
+cd snap-caption-app
 ionic serve
 ```
 

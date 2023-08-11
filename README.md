@@ -26,9 +26,9 @@ Follow these steps to get the app up and running:
 Create and activate a python venv:
 
 ```bash
-cd snap-caption-model
-python -m venv venv
-.\venv\Scripts\activate
+cd SnapCaption/snap-caption-model
+python3 -m venv venv
+source venv/bin/activate (for mac)
 ```
 
 Navigate to the directory containing the `requirements.txt` file and install the necessary Python packages using pip:
